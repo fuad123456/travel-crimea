@@ -6,7 +6,6 @@ export default function Ap() {
 	<div className="flex">
 		<div>
 			hello world
-
 		</div>
 		<Header/>
 	</div>
