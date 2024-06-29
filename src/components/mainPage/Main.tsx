@@ -156,30 +156,54 @@ export default function Main(): ReactElement {
 						<Carousel arrows infinite={true} >
 							<div>
 								<div style={contentStyle} className='flex gap-4 justify-around'>
-									<CardImage src='https://hmd.tvil.ru/upload/images/main/pop/winter/2023/cities/gelendzhik.webp'/>
-									<CardImage src='https://hmd.tvil.ru/upload/images/main/pop/winter/2023/cities/yalta.webp'/>
-									<CardImage src='https://hmd.tvil.ru/upload/images/main/pop/winter/2023/cities/kazan.webp'/>
+									<div>
+										<CardImage src='https://hmd.tvil.ru/upload/images/main/pop/winter/2023/cities/gelendzhik.webp'/>
+									</div>
+									<div className='hidden md:block'>
+										<CardImage src='https://hmd.tvil.ru/upload/images/main/pop/winter/2023/cities/yalta.webp'/>
+									</div>
+									<div className='hidden md:block'>
+										<CardImage src='https://hmd.tvil.ru/upload/images/main/pop/winter/2023/cities/kazan.webp'/>
+									</div>
 								</div>
 							</div>
 							<div>
 								<div style={contentStyle} className='flex gap-4 justify-around'>
-									<CardImage src='https://hmd.tvil.ru/upload/images/main/pop/winter/2023/cities/krasnodar.webp'/>
-									<CardImage src='https://hmd.tvil.ru/upload/images/main/pop/winter/2023/cities/feodosiya.webp'/>
-									<CardImage src='https://hmd.tvil.ru/upload/images/main/pop/winter/2023/cities/kaliningrad.webp'/>
+									<div>
+										<CardImage src='https://hmd.tvil.ru/upload/images/main/pop/winter/2023/cities/krasnodar.webp'/>
+									</div>
+									<div className='hidden md:block'>
+										<CardImage src='https://hmd.tvil.ru/upload/images/main/pop/winter/2023/cities/feodosiya.webp'/>
+									</div>
+									<div className='hidden md:block'>
+										<CardImage src='https://hmd.tvil.ru/upload/images/main/pop/winter/2023/cities/kaliningrad.webp'/>
+									</div>
 								</div>
 							</div>
 							<div>
 								<div style={contentStyle} className='flex gap-4 justify-around'>
-									<CardImage src='https://hmd.tvil.ru/upload/images/main/pop/winter/2023/cities/sochi.webp'/>
-									<CardImage src='https://hmd.tvil.ru/upload/images/main/pop/winter/2023/cities/sankt-peterburg.webp'/>
-									<CardImage src='https://hmd.tvil.ru/upload/images/main/pop/winter/2023/cities/anapa.webp'/>
+									<div>
+										<CardImage src='https://hmd.tvil.ru/upload/images/main/pop/winter/2023/cities/kazan.webp'/>
+									</div>
+									<div className='hidden md:block'>
+										<CardImage src='https://hmd.tvil.ru/upload/images/main/pop/winter/2023/cities/sankt-peterburg.webp'/>
+									</div>
+									<div className='hidden md:block'>
+										<CardImage src='https://hmd.tvil.ru/upload/images/main/pop/winter/2023/cities/anapa.webp'/>
+									</div>
 								</div>
 							</div>
 							<div>
 								<div style={contentStyle} className='flex gap-4 justify-around'>
-									<CardImage src='https://hmd.tvil.ru/upload/images/main/pop/winter/2023/cities/gelendzhik.webp'/>
-									<CardImage src='https://hmd.tvil.ru/upload/images/main/pop/winter/2023/cities/yalta.webp'/>
-									<CardImage src='https://hmd.tvil.ru/upload/images/main/pop/winter/2023/cities/kazan.webp'/>
+									<div>
+										<CardImage src='https://hmd.tvil.ru/upload/images/main/pop/winter/2023/cities/yalta.webp'/>
+									</div>
+									<div className='hidden md:block'>
+										<CardImage src='https://hmd.tvil.ru/upload/images/main/pop/winter/2023/cities/gelendzhik.webp'/>
+									</div>
+									<div className='hidden md:block'>
+										<CardImage src='https://hmd.tvil.ru/upload/images/main/pop/winter/2023/cities/kazan.webp'/>
+									</div>
 								</div>
 							</div>
 						</Carousel>
