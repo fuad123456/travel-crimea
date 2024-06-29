@@ -9,7 +9,17 @@ import LoopOutlinedIcon from '@mui/icons-material/LoopOutlined';
 import VerifiedUserOutlinedIcon from '@mui/icons-material/VerifiedUserOutlined';
 import PercentOutlinedIcon from '@mui/icons-material/PercentOutlined';
 import { useMediaQuery } from '@mui/material';
+import { Carousel } from 'antd';
+import CardImage from './CardImage';
 export default function Main(): ReactElement {
+	const contentStyle: React.CSSProperties = {
+		margin: 0,
+		height: '100%',
+		color: '#000',
+		lineHeight: '160px',
+		textAlign: 'center',
+		background: '#fff',
+	};
 	const isSmallScreen = useMediaQuery('(max-width:600px)');
 	return (
 		<>
@@ -23,72 +33,72 @@ export default function Main(): ReactElement {
 
 			>
 				<Container>
-				<h2 className='text-xl md:text-4xl lg:text-6xl pt-2 sm:pt-4 md:pt-10 text-white mb-4 md:mb-6 lg:mb-10'>Отели, квартиры и дома посуточно	Бронируй и заезжай</h2>
-				<div className='px-4 py-3 bg-slate-100 flex flex-col sm:flex-row gap-2'>
+					<h2 className='text-xl md:text-4xl lg:text-6xl pt-2 sm:pt-4 md:pt-10 text-white mb-4 md:mb-6 lg:mb-10'>Отели, квартиры и дома посуточно	Бронируй и заезжай</h2>
+					<div className='px-4 py-3 bg-slate-100 flex flex-col sm:flex-row gap-2'>
 
-					<FormControl fullWidth className=''>
-						<InputLabel id="test-select-label">Куда поедете?</InputLabel>
-						<Select
-							style={{ width: "100%" }}
-							variant="outlined"
-							labelId="test-select-label"
-							label={"Label1233333"}
-						>
-							<MenuItem value={10}>Сочи</MenuItem>
-							<MenuItem value={20}>Крым</MenuItem>
-							<MenuItem value={30}>Афганистан</MenuItem>
-						</Select>
-					</FormControl>
-					<div className='w-full'>
-						<LocalizationProvider
-							dateAdapter={AdapterDayjs}
-							localeText={ruRU.components.MuiLocalizationProvider.defaultProps.localeText}
+						<FormControl fullWidth className=''>
+							<InputLabel id="test-select-label">Куда поедете?</InputLabel>
+							<Select
+								style={{ width: "100%" }}
+								variant="outlined"
+								labelId="test-select-label"
+								label={"Label1233333"}
+							>
+								<MenuItem value={10}>Сочи</MenuItem>
+								<MenuItem value={20}>Крым</MenuItem>
+								<MenuItem value={30}>Афганистан</MenuItem>
+							</Select>
+						</FormControl>
+						<div className='w-full'>
+							<LocalizationProvider
+								dateAdapter={AdapterDayjs}
+								localeText={ruRU.components.MuiLocalizationProvider.defaultProps.localeText}
 
-						>
-							<DatePicker
-								className='w-full'
-								label="Заезд"
-							// slotProps={{
-							// 	textField: {
-							// 		helperText: 'MM/DD/YYYY',
-							// 	},
-							// }}
-							/>
-						</LocalizationProvider>
+							>
+								<DatePicker
+									className='w-full'
+									label="Заезд"
+								// slotProps={{
+								// 	textField: {
+								// 		helperText: 'MM/DD/YYYY',
+								// 	},
+								// }}
+								/>
+							</LocalizationProvider>
+						</div>
+						<div className='w-full'>
+							<LocalizationProvider dateAdapter={AdapterDayjs} localeText={ruRU.components.MuiLocalizationProvider.defaultProps.localeText}>
+								<DatePicker
+									className='w-full'
+									label="Выезд"
+								// slotProps={{
+								// 	textField: {
+								// 		helperText: 'MM/DD/YYYY',
+								// 	},
+								// }}
+								/>
+							</LocalizationProvider>
+						</div>
+						<FormControl fullWidth>
+							<InputLabel id="test-select-label">Куда поедете?</InputLabel>
+							<Select
+								style={{ width: "100%" }}
+								variant="outlined"
+								labelId="test-select-label"
+								label={"Label1233333"}
+							>
+								<MenuItem value={10}>Сочи</MenuItem>
+								<MenuItem value={20}>Крым</MenuItem>
+								<MenuItem value={30}>Афганистан</MenuItem>
+							</Select>
+						</FormControl>
+						<Button variant="contained" color='success' className='w-full'>Найти жилье</Button>
 					</div>
-					<div className='w-full'>
-						<LocalizationProvider dateAdapter={AdapterDayjs} localeText={ruRU.components.MuiLocalizationProvider.defaultProps.localeText}>
-							<DatePicker
-								className='w-full'
-								label="Выезд"
-							// slotProps={{
-							// 	textField: {
-							// 		helperText: 'MM/DD/YYYY',
-							// 	},
-							// }}
-							/>
-						</LocalizationProvider>
-					</div>
-					<FormControl fullWidth>
-						<InputLabel id="test-select-label">Куда поедете?</InputLabel>
-						<Select
-							style={{ width: "100%" }}
-							variant="outlined"
-							labelId="test-select-label"
-							label={"Label1233333"}
-						>
-							<MenuItem value={10}>Сочи</MenuItem>
-							<MenuItem value={20}>Крым</MenuItem>
-							<MenuItem value={30}>Афганистан</MenuItem>
-						</Select>
-					</FormControl>
-					<Button variant="contained" color='success' className='w-full'>Найти жилье</Button>
-				</div>
 				</Container>
 			</div>
 			<div className='mt-14'>
 				<Container>
-					<div  className='mb-8'>
+					<div className='mb-8'>
 						<Typography variant='h4'> Почему ТВИЛ </Typography>
 					</div>
 					<Box
@@ -109,7 +119,7 @@ export default function Main(): ReactElement {
 						<Paper elevation={10} className='w-full'>
 							<div className="flex gap-4 mb-8">
 								<div >
-									<LoopOutlinedIcon fontSize='large' color='info'/>
+									<LoopOutlinedIcon fontSize='large' color='info' />
 								</div>
 								<div>
 									<Typography variant='h5'>
@@ -120,7 +130,7 @@ export default function Main(): ReactElement {
 							</div>
 							<div className="flex gap-4 mb-8">
 								<div >
-									<VerifiedUserOutlinedIcon fontSize='large' color='info'/>
+									<VerifiedUserOutlinedIcon fontSize='large' color='info' />
 								</div>
 								<div>
 									<Typography variant='h5'>
@@ -131,7 +141,7 @@ export default function Main(): ReactElement {
 							</div>
 							<div className="flex gap-4">
 								<div >
-									<PercentOutlinedIcon fontSize='large' color='info'/>
+									<PercentOutlinedIcon fontSize='large' color='info' />
 								</div>
 								<div>
 									<Typography variant='h5'>
@@ -142,6 +152,38 @@ export default function Main(): ReactElement {
 							</div>
 						</Paper>
 					</Box>
+					<div className='mt-16'>
+						<Carousel arrows infinite={true} >
+							<div>
+								<div style={contentStyle} className='flex gap-4 justify-around'>
+									<CardImage src='https://hmd.tvil.ru/upload/images/main/pop/winter/2023/cities/gelendzhik.webp'/>
+									<CardImage src='https://hmd.tvil.ru/upload/images/main/pop/winter/2023/cities/yalta.webp'/>
+									<CardImage src='https://hmd.tvil.ru/upload/images/main/pop/winter/2023/cities/kazan.webp'/>
+								</div>
+							</div>
+							<div>
+								<div style={contentStyle} className='flex gap-4 justify-around'>
+									<CardImage src='https://hmd.tvil.ru/upload/images/main/pop/winter/2023/cities/krasnodar.webp'/>
+									<CardImage src='https://hmd.tvil.ru/upload/images/main/pop/winter/2023/cities/feodosiya.webp'/>
+									<CardImage src='https://hmd.tvil.ru/upload/images/main/pop/winter/2023/cities/kaliningrad.webp'/>
+								</div>
+							</div>
+							<div>
+								<div style={contentStyle} className='flex gap-4 justify-around'>
+									<CardImage src='https://hmd.tvil.ru/upload/images/main/pop/winter/2023/cities/sochi.webp'/>
+									<CardImage src='https://hmd.tvil.ru/upload/images/main/pop/winter/2023/cities/sankt-peterburg.webp'/>
+									<CardImage src='https://hmd.tvil.ru/upload/images/main/pop/winter/2023/cities/anapa.webp'/>
+								</div>
+							</div>
+							<div>
+								<div style={contentStyle} className='flex gap-4 justify-around'>
+									<CardImage src='https://hmd.tvil.ru/upload/images/main/pop/winter/2023/cities/gelendzhik.webp'/>
+									<CardImage src='https://hmd.tvil.ru/upload/images/main/pop/winter/2023/cities/yalta.webp'/>
+									<CardImage src='https://hmd.tvil.ru/upload/images/main/pop/winter/2023/cities/kazan.webp'/>
+								</div>
+							</div>
+						</Carousel>
+					</div>
 				</Container>
 			</div>
 		</>
