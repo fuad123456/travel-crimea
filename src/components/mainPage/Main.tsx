@@ -8,7 +8,9 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider/L
 import LoopOutlinedIcon from '@mui/icons-material/LoopOutlined';
 import VerifiedUserOutlinedIcon from '@mui/icons-material/VerifiedUserOutlined';
 import PercentOutlinedIcon from '@mui/icons-material/PercentOutlined';
+import { useMediaQuery } from '@mui/material';
 export default function Main(): ReactElement {
+	const isSmallScreen = useMediaQuery('(max-width:600px)');
 	return (
 		<>
 			<div
@@ -17,11 +19,11 @@ export default function Main(): ReactElement {
 					backgroundSize: "cover",
 					backgroundPosition: "center right"
 				}}
-				className='h-96 p-10'
+				className='h-96 pt-2 sm:pt-4 md:pt-10'
 
 			>
 				<Container>
-				<h2 className='text-2xl md:text-4xl lg:text-6xl pt-10 text-white mb-10'>Отели, квартиры и дома посуточно	Бронируй и заезжай</h2>
+				<h2 className='text-xl md:text-4xl lg:text-6xl pt-2 sm:pt-4 md:pt-10 text-white mb-4 md:mb-6 lg:mb-10'>Отели, квартиры и дома посуточно	Бронируй и заезжай</h2>
 				<div className='px-4 py-3 bg-slate-100 flex flex-col sm:flex-row gap-2'>
 
 					<FormControl fullWidth className=''>
@@ -84,7 +86,7 @@ export default function Main(): ReactElement {
 				</div>
 				</Container>
 			</div>
-			<div className='mt-10'>
+			<div className='mt-14'>
 				<Container>
 					<div  className='mb-8'>
 						<Typography variant='h4'> Почему ТВИЛ </Typography>
@@ -97,8 +99,8 @@ export default function Main(): ReactElement {
 								m: 1,
 								width: "100%",
 								height: "100%",
-								paddingLeft:8,
-								paddingRight:8,
+								paddingLeft: isSmallScreen ? 4 : 8,
+								paddingRight: isSmallScreen ? 4 : 8,
 								paddingTop: 6,
 								paddingBottom: 6,
 							},
